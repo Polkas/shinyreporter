@@ -1,0 +1,50 @@
+name: ci
+
+on:
+    push:
+      branches: [main]
+    pull_request:
+      branches: [main]
+
+jobs:
+  ci:
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        python: ["3.8", "3.9", "3.10", "3.11"]
+    # Set up operating system
+    runs-on: ${{ matrix.os }}
+
+    # Define job steps
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Check-out repository
+        uses: actions/checkout@v2
+
+      - name: Install multidim package
+        run: pip install ".[all]"
+
+      - name: Test with pytest
+        run: python -m pytest tests --doctest-modules --cov=shinyreporter --cov-report=xml
+
+      - name: Test with mypy
+        run: python -m mypy src
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          directory: ./coverage/reports/
+          env_vars: OS,PYTHON
+          fail_ci_if_error: true
+          files: ./coverage.xml
+          flags: unittests
+          name: codecov-umbrella
+          verbose: true
+
+      - name: Build documentation
+        run: make html --directory docs/

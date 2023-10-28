@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shinyreporter"
+version = "0.1.0.dev0"
+description = "reporting modules for py-shiny"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE.txt"}
+keywords = ["py-shiny", "shiny", "modules", "reporting"]
+authors = [
+  {name = "Konrad Pagacz", email = "konrad.pagacz@gmail.com"},
+  {name = "Maciej Nasinski", email = "nasinski.maciej@gmail.com"},
+]
+maintainers = [
+    {name = "Konrad Pagacz", email = "konrad.pagacz@gmail.com"},
+    {name = "Maciej Nasinski", email = "nasinski.maciej@gmail.com"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+dependencies = [
+    "shiny",
+    "matplotlib",
+    "importlib-resources",
+    "importlib-metadata",
+]
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-cov", "mypy"]
+docs = [
+    "Sphinx>=6.2.1", 
+    "sphinx-autoapi>=3.0.0", 
+    "sphinx-rtd-theme",
+    "myst-parser"
+]
+build = ["build"]
+benchmark = ["snakeviz"]
+styler = ["flake8", "black"]
+all = ["shinyreporter[test,docs,build,benchmark,styler]"]
+
+[project.urls]
+"Homepage" = "https://github.com/polkas/shinyreporter"
+"Bug Reports" = "https://github.com/polkas/shinyreporter/issues"
+"Source" = "https://github.com/polkas/shinyreporter"
+"Changelog" = "https://raw.githubusercontent.com/Polkas/shinyreporter/main/CHANGELOG.md"
+"Documentation" = "https://shinyreporter.readthedocs.io/en/latest/"
