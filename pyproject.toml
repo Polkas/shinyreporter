@@ -41,7 +41,8 @@ test = ["pytest", "pytest-cov", "mypy"]
 docs = [
     "Sphinx>=6.2.1", 
     "sphinx-autoapi>=3.0.0", 
-    "sphinx-rtd-theme"
+    "sphinx-rtd-theme",
+    "myst-parser"
 ]
 build = ["build"]
 benchmark = ["snakeviz"]
