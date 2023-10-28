@@ -29,7 +29,7 @@ jobs:
         run: pip install ".[all]"
 
       - name: Test with pytest
-        run: python -m pytest tests --doctest-modules --cov=multidim --cov-report=xml
+        run: python -m pytest tests --doctest-modules --cov=shinyreporter --cov-report=xml
 
       - name: Test with mypy
         run: python -m mypy src
