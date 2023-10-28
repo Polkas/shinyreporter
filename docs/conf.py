@@ -16,7 +16,6 @@ author = "Maciej Nasinski and Konrad Pagacz"
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "myst_parser",
     "autoapi.extension",
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
