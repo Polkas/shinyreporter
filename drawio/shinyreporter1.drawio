@@ -1,0 +1,123 @@
+<mxfile host="app.diagrams.net" modified="2023-11-07T21:27:35.031Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/119.0" etag="HreNIwGbDKgD1oiqXAOx" version="22.0.8" type="device" pages="3">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Core">
+    <mxGraphModel dx="1430" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="KcolckTGxSu_sqtja2Dw-0" value="Report" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="75" y="110" width="140" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="KcolckTGxSu_sqtja2Dw-1" value="+ blocks: [ContentBlock]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="KcolckTGxSu_sqtja2Dw-0">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KcolckTGxSu_sqtja2Dw-2" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="KcolckTGxSu_sqtja2Dw-0">
+          <mxGeometry y="52" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KcolckTGxSu_sqtja2Dw-3" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="KcolckTGxSu_sqtja2Dw-0">
+          <mxGeometry y="78" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KcolckTGxSu_sqtja2Dw-4" value="ContentBlock&amp;lt;Content (invariant)&amp;gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="410" y="110" width="380" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="KcolckTGxSu_sqtja2Dw-5" value="+ content: Content" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="KcolckTGxSu_sqtja2Dw-4">
+          <mxGeometry y="26" width="380" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KcolckTGxSu_sqtja2Dw-7" value="+ " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="KcolckTGxSu_sqtja2Dw-4">
+          <mxGeometry y="52" width="380" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="3QuWH9r0pgrzVoUaPKMq" name="Shiny Module">
+    <mxGraphModel dx="2074" dy="1156" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sSjWwszIrTMPnJhGUuGO-1" value="&lt;h1&gt;Idea&lt;/h1&gt;&lt;p&gt;Our reporter module consists of:&lt;/p&gt;&lt;p&gt;* the skeleton that `shinyreporter` implements&lt;/p&gt;&lt;p&gt;* the blocks rendered using shiny renderers&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="50" width="310" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="c3kHtK6Cc0-dLp6WAbci-1" value="ShinyRenderer&amp;lt;T (contrvariant)&amp;gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="92.5" y="440" width="265" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="c3kHtK6Cc0-dLp6WAbci-2" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="c3kHtK6Cc0-dLp6WAbci-1">
+          <mxGeometry y="26" width="265" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="c3kHtK6Cc0-dLp6WAbci-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="c3kHtK6Cc0-dLp6WAbci-1">
+          <mxGeometry y="52" width="265" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="c3kHtK6Cc0-dLp6WAbci-4" value="&lt;div&gt;+ call(block: ContentBlock&amp;lt;T&amp;gt;): (pyshiny_ui_func, pyshiny_srv_func)&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="c3kHtK6Cc0-dLp6WAbci-1">
+          <mxGeometry y="60" width="265" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c3kHtK6Cc0-dLp6WAbci-5" value="Python has no built-in dynamic dispatch, so we have to do something like a custom dipatcher dict" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="250" width="290" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="c3kHtK6Cc0-dLp6WAbci-6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;text-decoration:underline;&quot;&gt;&lt;b&gt;ContentType:ShinyRenderer&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;str: StrRenderer&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;pyplot: PlotRenderer&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;markdown: MarkdownRenderer&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;etc...&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="480" y="270" width="190" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="c3kHtK6Cc0-dLp6WAbci-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.026;entryY=0.512;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="c3kHtK6Cc0-dLp6WAbci-5" target="c3kHtK6Cc0-dLp6WAbci-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="316" />
+              <mxPoint x="400" y="316" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="uicIMZTQTqFCk2ju2SLv" name="Archiving">
+    <mxGraphModel dx="1430" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="moQiR58-OZyEZ7cUCzfm-5" value="ArchivedReport (nbformat)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="80" width="310" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="moQiR58-OZyEZ7cUCzfm-6" value="+ blocks: [ArchivedBlock]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="moQiR58-OZyEZ7cUCzfm-5">
+          <mxGeometry y="26" width="310" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="moQiR58-OZyEZ7cUCzfm-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="moQiR58-OZyEZ7cUCzfm-5">
+          <mxGeometry y="52" width="310" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="moQiR58-OZyEZ7cUCzfm-8" value="+ export()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="moQiR58-OZyEZ7cUCzfm-5">
+          <mxGeometry y="60" width="310" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="moQiR58-OZyEZ7cUCzfm-9" value="Python has no built-in dynamic dispatch, so we have to do something like a custom dipatcher dict" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="210" width="290" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="moQiR58-OZyEZ7cUCzfm-11" value="ArchivedBlock" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="380" width="230" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="moQiR58-OZyEZ7cUCzfm-12" value="Everything that has to do with nbformat. We might want to reuse nbformat classes instead of running our own archived block" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="moQiR58-OZyEZ7cUCzfm-11">
+          <mxGeometry y="26" width="230" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="moQiR58-OZyEZ7cUCzfm-13" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="moQiR58-OZyEZ7cUCzfm-11">
+          <mxGeometry y="100" width="230" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="moQiR58-OZyEZ7cUCzfm-14" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="moQiR58-OZyEZ7cUCzfm-11">
+          <mxGeometry y="108" width="230" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="moQiR58-OZyEZ7cUCzfm-15" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;text-decoration:underline;&quot;&gt;&lt;b&gt;Content:Archiver&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;str: StringArchiver&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;pyplot: PyplotArchiver&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;etc...&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="460" y="230" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="moQiR58-OZyEZ7cUCzfm-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.026;entryY=0.512;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="moQiR58-OZyEZ7cUCzfm-9" target="moQiR58-OZyEZ7cUCzfm-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="276" />
+              <mxPoint x="380" y="276" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="moQiR58-OZyEZ7cUCzfm-17" value="Archiver&amp;lt;T&amp;gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="430" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="moQiR58-OZyEZ7cUCzfm-19" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="moQiR58-OZyEZ7cUCzfm-17">
+          <mxGeometry y="26" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="moQiR58-OZyEZ7cUCzfm-20" value="+ call(content: T): ArchivedBlock" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="moQiR58-OZyEZ7cUCzfm-17">
+          <mxGeometry y="34" width="220" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
