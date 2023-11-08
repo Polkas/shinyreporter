@@ -7,7 +7,7 @@ from .type_aliases import ShinyUI, ShinyServer
 from shiny import reactive, render, ui, module
 from shiny.session import Inputs, Outputs, Session
 
-__all__ = ["ShinyRenderer", "TextRenderer"]
+__all__ = ["ShinyRenderer", "TextRenderer", "NumberRenderer"]
 
 CBlock = TypeVar("CBlock", bound="ContentBlock", contravariant=True)
 RendererOut = TypeVar("RendererOut", covariant=True)
@@ -19,17 +19,14 @@ class ShinyRenderer(Protocol[CBlock, RendererOut]):
         ...
 
 
-class TextRenderer(ShinyRenderer[ContentBlock[str], Tuple[ShinyUI, ShinyServer]]):
-    def render(self, block: ContentBlock[str]) -> Tuple[ShinyUI, ShinyServer]:
-        def custom_ui() -> ui.tagChild:
-            ui.div(block.get_content() or "Empty block!")
+class TextRenderer(ShinyRenderer[ContentBlock[str], ShinyUI]):
+    def render(self, block: ContentBlock[str]) -> ShinyUI:
+        def custom_ui() -> ui.TagChild:
+            return ui.div(block.get_content() or "Empty block!")
 
-        def custom_srv(input: Inputs, output: Outputs, session: Session):
-            pass
+        return custom_ui
 
-        def f(ui: ShinyUI) -> None:
-            pass
 
-        f(custom_ui)
-
-        return custom_ui, custom_srv
+class NumberRenderer(ShinyRenderer[ContentBlock[int], ShinyUI]):
+    def render(self, block: ContentBlock[int]) -> ShinyUI:
+        return lambda: ui.div(block.get_content() or "Empty block!")
